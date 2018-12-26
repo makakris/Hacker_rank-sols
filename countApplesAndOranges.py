@@ -8,20 +8,19 @@ import sys
 
 # Complete the countApplesAndOranges function below.
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    count_a=0
+    q=[]
+    w=[]
     count_b=0
     for i in range(0,len(apples)):
-        apples[i]=apples[i]+a
+        x=apples[i]+a
+        if x>=s and x<=t:
+            q.append(x)
     for j in range(0,len(oranges)):
-        oranges[j]=oranges[j]+b
-    for x in range(0,len(apples)):
-        if apples[x]>=s and apples[x]<=t:
-            count_a=count_a+1
-    for y in range(0,len(oranges)):
-        if oranges[y]>=s and oranges[y]<=t:
-            count_b=count_b+1
-    print(count_a)
-    print(count_b)                    
+        y=oranges[j]+b
+        if y>=s and y<=t:
+            w.append(y)
+    print(len(q))
+    print(len(w))                    
 
 
 if __name__ == '__main__':
