@@ -10,7 +10,6 @@ import sys
 def countApplesAndOranges(s, t, a, b, apples, oranges):
     q=[]
     w=[]
-    count_b=0
     for i in range(0,len(apples)):
         x=apples[i]+a
         if x>=s and x<=t:
